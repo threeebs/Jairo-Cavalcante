@@ -72,3 +72,10 @@ body:not(.dark) .theme-toggle:hover{background:var(--paper-2)}
 @media(min-width:761px) and (max-width:1000px){
   .nav-page{gap:12px}
 }
+
+/* Trajetória detalhada na home: acesso compatível com hospedagem sem subrotas */
+#trajetoria-completa{scroll-margin-top:84px;background:var(--card)}
+#trajetoria-completa .timeline{margin-top:42px}
+#trajetoria-completa .trajectory-extra{margin-top:82px;padding-top:44px;border-top:1px solid var(--line)}
+#trajetoria-completa .text-link{display:inline-block;margin-top:16px;color:var(--wine)}
+@media(max-width:640px){#trajetoria-completa .trajectory-extra{margin-top:52px;padding-top:28px}}
