@@ -56,3 +56,19 @@ body:not(.dark) .theme-toggle:hover{background:var(--paper-2)}
 @media(max-width:1000px){.hero-grid{grid-template-columns:1fr}.hero-visual{transform:none}.hero h1{font-size:clamp(3rem,8vw,5rem)}.nav-page{flex-wrap:wrap}}
 @media(max-width:640px){.hero h1{font-size:clamp(2.75rem,12vw,3.9rem)}.hero-meta>div{grid-template-columns:30px auto}.hero-visual{width:100%;padding:0 16px}.hero-meta{justify-content:space-between;gap:14px}.portrait-card{max-width:75%}.quote-card{z-index:1}.about-actions a{font-size:.89rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.hero-visual{transform:none}}
+
+/* V3 — retorno visível no celular e crédito discreto */
+.back-home-mobile{display:none}
+.site-credit{display:block;font:500 .7rem/1.5 var(--sans);color:var(--muted);white-space:nowrap}
+.site-credit a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.site-credit a:hover{color:var(--wine)}
+@media(max-width:760px){
+  .back-home-mobile{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-left:auto;padding:10px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:700 .78rem/1.2 var(--sans);white-space:nowrap}
+  .back-home-mobile span{color:var(--wine);font-size:1.15rem}
+  .nav-page{display:none}
+  .footer-inner{gap:12px}
+  .site-credit{white-space:normal}
+}
+@media(min-width:761px) and (max-width:1000px){
+  .nav-page{gap:12px}
+}
