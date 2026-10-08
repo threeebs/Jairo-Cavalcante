@@ -79,3 +79,20 @@ body:not(.dark) .theme-toggle:hover{background:var(--paper-2)}
 #trajetoria-completa .trajectory-extra{margin-top:82px;padding-top:44px;border-top:1px solid var(--line)}
 #trajetoria-completa .text-link{display:inline-block;margin-top:16px;color:var(--wine)}
 @media(max-width:640px){#trajetoria-completa .trajectory-extra{margin-top:52px;padding-top:28px}}
+
+/* V5 — retrato sem sobreposições: desktop, tablet e celular */
+.hero-visual{position:relative;isolation:isolate;padding:28px 56px 40px;min-width:0}
+.hero-visual .portrait-frame{width:min(380px,100%);margin:0 auto}
+.hero-visual .portrait-card{left:-18px;bottom:18px;max-width:205px;padding:13px 17px;z-index:2}
+.hero-visual .quote-card{right:-2px;top:48px;width:194px;z-index:2;padding:17px;font-size:.92rem}
+@media(max-width:1000px){
+  .hero-visual{width:min(100%,570px);margin-inline:auto;padding:34px 55px 30px}
+  .hero-visual .quote-card{right:0;top:54px}
+}
+@media(max-width:760px){
+  .hero-visual{width:min(100%,420px);display:flex;flex-direction:column;align-items:center;gap:20px;padding:14px 12px 30px}
+  .hero-visual .portrait-frame{width:min(100%,310px);padding:15px;margin:0 auto}
+  .hero-visual .portrait-card{position:static;max-width:none;width:100%;margin-top:16px;padding:12px 14px;border:1px solid var(--line);box-shadow:0 8px 25px rgba(56,25,33,.09)}
+  .hero-visual .portrait-card strong{font-size:1rem}
+  .hero-visual .quote-card{position:static;width:100%;max-width:310px;margin:0;padding:18px 20px;font-size:1rem;line-height:1.5;box-shadow:0 12px 30px rgba(123,16,38,.14)}
+}
